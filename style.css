@@ -1,1 +1,193 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:linear-gradient(135deg,#ffd6e8,#fff4f9);
+
+color:#555;
+
+}
+
+/* Header */
+
+header{
+
+background:#ffb6d9;
+
+padding:30px;
+
+text-align:center;
+
+color:white;
+
+font-size:20px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+/* Sections */
+
+section{
+
+width:90%;
+
+max-width:900px;
+
+margin:30px auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+section:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* Profile */
+
+.profile{
+
+text-align:center;
+
+}
+
+.profile img{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid #ffb6d9;
+
+box-shadow:0 10px 20px rgba(255,182,217,.5);
+
+margin-bottom:20px;
+
+}
+
+h2{
+
+color:#ff69b4;
+
+margin-bottom:15px;
+
+}
+
+.card{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.card div{
+
+background:#ffe5f1;
+
+padding:15px 25px;
+
+border-radius:15px;
+
+transition:.3s;
+
+font-weight:bold;
+
+}
+
+.card div:hover{
+
+background:#ffb6d9;
+
+color:white;
+
+transform:scale(1.08);
+
+}
+
+footer{
+
+margin-top:40px;
+
+padding:25px;
+
+text-align:center;
+
+background:#ffb6d9;
+
+color:white;
+
+}
+
+/* ดอกไม้ลอย */
+
+body::before{
+
+content:"🌸 🌼 🌷 💖";
+
+font-size:30px;
+
+position:fixed;
+
+top:15px;
+
+right:20px;
+
+animation:float 5s infinite alternate;
+
+}
+
+@keyframes float{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(20px);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+.card{
+
+flex-direction:column;
+
+}
+
+}
