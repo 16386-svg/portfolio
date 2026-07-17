@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies | Chananchita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* จัดเรียงการ์ดงานอดิเรกเป็น 3 ใบอยู่กึ่งกลาง */
+        .hobbies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+        }
+        .hobby-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 260px; /* กำหนดขนาดการ์ดให้เท่ากัน */
+        }
+        .hobby-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.03);
+        }
+        /* ⚡ อนิเมชั่นตอนกดการ์ด */
+        .hobby-card:active {
+            transform: scale(0.96) translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hobby-icon {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            filter: drop-shadow(0 4px 10px rgba(255, 255, 255, 0.1));
+        }
+        .hobby-title {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container sticker-container">
+    
+    <!-- 🎈 สติกเกอร์ตกแต่งรอบ ๆ หน้า Hobbies -->
+    <div class="sticker delay-1" style="top: -20px; left: -20px; font-size: 2.2rem;">✨</div>
+    <div class="sticker delay-3" style="top: 30%; right: -30px; font-size: 2.2rem;">🌸</div>
+    <div class="sticker delay-2" style="bottom: -20px; left: 10px; font-size: 1.8rem;">🌿</div>
+    <div class="sticker delay-1" style="bottom: -10px; right: -10px; font-size: 2rem;">💡</div>
+
+    <div class="page-title">
+        <h2>Hobbies</h2>
+        <p>A look into my personal space and favorite activities</p>
+    </div>
+
+    <!-- Grid Layout แสดงการ์ด Hobbies 3 ช่องตามที่รีเควส -->
+    <div class="hobbies-grid">
+        
+        <!-- Drawing Card -->
+        <div class="hobby-card">
+            <div class="hobby-icon">🎨</div>
+            <div class="hobby-title">drawing</div>
+        </div>
+
+        <!-- Reading Books Card -->
+        <div class="hobby-card">
+            <div class="hobby-icon">📚</div>
+            <div class="hobby-title">reading books</div>
+        </div>
+
+        <!-- Watching Movies Card -->
+        <div class="hobby-card">
+            <div class="hobby-icon">🎬</div>
+            <div class="hobby-title">watching movies</div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    Made with 🖤 by Chananchita
+</footer>
+
+</body>
+</html>
 
