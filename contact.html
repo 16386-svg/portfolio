@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Chananchita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* จัดเรียงการ์ดให้อยู่กึ่งกลางพอดีสำหรับ 3 อัน */
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+        }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none; 
+            width: 100%;
+            max-width: 260px; /* กำหนดขนาดการ์ดให้เท่ากัน */
+        }
+        .contact-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.03);
+        }
+        /* ⚡ อนิเมชั่นตอนกดการ์ด */
+        .contact-card:active {
+            transform: scale(0.96) translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+        }
 
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            filter: drop-shadow(0 4px 10px rgba(255, 255, 255, 0.1));
+        }
+        .contact-platform {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .contact-username {
+            color: #8a8a93;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            word-break: break-word; /* ป้องกันอีเมลยาวจนล้นกรอบ */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<div class="container sticker-container">
+    
+    <!-- 🎈 สติกเกอร์ตกแต่งรอบ ๆ หน้าคอนแทค -->
+    <div class="sticker delay-1" style="top: -20px; left: -20px; font-size: 2rem;">💌</div>
+    <div class="sticker delay-3" style="top: 30%; right: -30px; font-size: 2.2rem;">💬</div>
+    <div class="sticker delay-2" style="bottom: -20px; left: 10px; font-size: 1.8rem;">📱</div>
+    <div class="sticker delay-1" style="bottom: -10px; right: -10px; font-size: 2.1rem;">✨</div>
+
+    <div class="page-title">
+        <h2>Get In Touch</h2>
+        <p>Feel free to reach out to me</p>
+    </div>
+
+    <!-- Grid Layout แสดงการ์ด Social 3 ช่องตามที่รีเควส -->
+    <div class="contact-grid">
+        
+        <!-- Phone Card -->
+        <a href="tel:0927711519" class="contact-card">
+            <div class="contact-icon">📞</div>
+            <div class="contact-platform">Phone</div>
+            <div class="contact-username">092 771 1519</div>
+        </a>
+
+        <!-- Instagram Card -->
+        <a href="https://instagram.com/dihcesurr" target="_blank" class="contact-card">
+            <div class="contact-icon">📸</div>
+            <div class="contact-platform">Instagram</div>
+            <div class="contact-username">@dihcesurr</div>
+        </a>
+
+        <!-- Email Card -->
+        <a href="mailto:cwittayawosased@gmail.com" class="contact-card">
+            <div class="contact-icon">💌</div>
+            <div class="contact-platform">Gmail</div>
+            <div class="contact-username">cwittayawosased@gmail.com</div>
+        </a>
+
+    </div>
+</div>
+
+<footer>
+    Made with 🖤 by Chananchita
+</footer>
+
+</body>
+</html>
