@@ -150,3 +150,34 @@ footer {
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
+
+/* 🔳 ปรับแต่งปุ่ม Get to know me ให้กลับมามีกรอบขาว */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ffffff; /* พื้นหลังสีขาวเด่น ๆ */
+    color: #1a1a1e !important; /* ตัวหนังสือสีเข้มตัดกัน */
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+}
+
+/* ตอนเอานิ้วแตะหรือเมาส์ชี้ ปุ่มจะเปลี่ยนเป็นสไตล์โปร่งแสงเท่ ๆ */
+.btn:hover {
+    background: transparent;
+    color: #ffffff !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ⚡ อนิเมชั่นตอนกด (Click / Active) ปุ่มจะยุบลงไปเล็กน้อย */
+.btn:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.9);
+}
