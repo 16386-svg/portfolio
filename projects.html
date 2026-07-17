@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Chananchita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* จัดเรียงกรอบรูปผลงานเป็น 2 คอลัมน์ซ้ายขวา */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            position: relative;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .project-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.03);
+        }
+        /* สไตล์กรอบรูปผลงาน */
+        .project-img-frame {
+            width: 100%;
+            height: 180px;
+            background: #1a1a1e;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover .project-img-frame {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        .project-title {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container sticker-container">
+    
+    <!-- 🎈 สติกเกอร์ตกแต่งรอบ ๆ หน้าผลงาน -->
+    <div class="sticker delay-1" style="top: -20px; left: -20px; font-size: 2rem;">🎨</div>
+    <div class="sticker delay-3" style="top: 50%; right: -30px; font-size: 2.2rem;">✨</div>
+    <div class="sticker delay-2" style="bottom: -20px; left: 10px; font-size: 1.8rem;">🚀</div>
+    <div class="sticker delay-1" style="bottom: -10px; right: -10px; font-size: 2rem;">📸</div>
+
+    <div class="page-title">
+        <h2>My Projects</h2>
+        <p>A visual showcase of my recent works and designs</p>
+    </div>
+
+    <!-- Grid Layout แสดงกรอบรูป 4 รูป -->
+    <div class="projects-grid">
+        
+        <!-- รูปที่ 1 -->
+        <div class="project-card">
+            <!-- ⚠️ สามารถเปลี่ยน "project1.jpg" เป็นชื่อไฟล์รูปจริงของคุณได้เลยนะคะ -->
+            <img src="project1.jpg" alt="Project 1" class="project-img-frame" onerror="this.src='https://via.placeholder.com/300x180/1a1a1e/ffffff?text=Project+01'">
+            <h3 class="project-title">Web Development</h3>
+        </div>
+
+        <!-- รูปที่ 2 -->
+        <div class="project-card">
+            <img src="project2.jpg" alt="Project 2" class="project-img-frame" onerror="this.src='https://via.placeholder.com/300x180/1a1a1e/ffffff?text=Project+02'">
+            <h3 class="project-title">UI/UX Design</h3>
+        </div>
+
+        <!-- รูปที่ 3 -->
+        <div class="project-card">
+            <img src="project3.jpg" alt="Project 3" class="project-img-frame" onerror="this.src='https://via.placeholder.com/300x180/1a1a1e/ffffff?text=Project+03'">
+            <h3 class="project-title">Graphic Template</h3>
+        </div>
+
+        <!-- รูปที่ 4 -->
+        <div class="project-card">
+            <img src="project4.jpg" alt="Project 4" class="project-img-frame" onerror="this.src='https://via.placeholder.com/300x180/1a1a1e/ffffff?text=Project+04'">
+            <h3 class="project-title">Creative Artwork</h3>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    Made with 🖤 by Chananchita
+</footer>
+
+</body>
+</html>
 
