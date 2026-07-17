@@ -29,7 +29,7 @@ header h1 {
     text-transform: uppercase;
 }
 
-/* Glassmorphism Navigation Bar */
+/* 🔳 เมนูบาร์เวอร์ชันปุ่มกรอบขาว + อนิเมชั่นตอนกด */
 .navbar {
     background: rgba(20, 20, 25, 0.85);
     backdrop-filter: blur(12px);
@@ -40,22 +40,37 @@ header h1 {
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* เว้นระยะห่างระหว่างปุ่ม */
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: #8a8a93;
     text-decoration: none;
-    margin: 0 20px;
-    font-weight: 400;
-    font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 0.85rem;
     letter-spacing: 1px;
     text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* กรอบเริ่มต้นจาง ๆ */
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ตอนเอานิ้วไปแตะหรือเมาส์โฮเวอร์ ให้กรอบและตัวหนังสือเป็นสีขาวเรืองแสง */
 .navbar a:hover, .navbar a.active {
     color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    border-color: #ffffff; /* เปลี่ยนเป็นกรอบเส้นสีขาว */
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* ⚡ อนิเมชั่นตอนกด (Click / Active State) ปุ่มจะยุบลงไปเล็กน้อย */
+.navbar a:active {
+    transform: scale(0.92); 
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Main Container spacing */
@@ -102,71 +117,6 @@ header h1 {
     box-shadow: 0 15px 35px rgba(255, 255, 255, 0.03);
 }
 
-/* Form Styling */
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    color: #b5b5be;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-}
-
-.form-control {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    padding: 12px 16px;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
-
-.form-control:focus {
-    outline: none;
-    border-color: rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-.btn {
-    display: inline-block;
-    background: #ffffff;
-    color: #121212;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 30px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.btn:hover {
-    background: #e0e0e0;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Footer style */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    color: #55555c;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
-
 /* 🎈 Sticker Styling & Animations */
 .sticker-container {
     position: relative;
@@ -182,25 +132,21 @@ footer {
     z-index: 5;
 }
 
-/* เอฟเฟกต์ลอยขึ้นลงสลับกันให้ดูมีมิติ */
-.sticker.delay-1 {
-    animation-delay: 0.5s;
-}
-.sticker.delay-2 {
-    animation-delay: 1.5s;
-}
-.sticker.delay-3 {
-    animation-delay: 2.5s;
-}
+.sticker.delay-1 { animation-delay: 0.5s; }
+.sticker.delay-2 { animation-delay: 1.5s; }
+.sticker.delay-3 { animation-delay: 2.5s; }
 
 @keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-10px) rotate(5deg);
-    }
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    color: #55555c;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
