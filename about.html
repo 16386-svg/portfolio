@@ -11,38 +11,36 @@
     <style>
         .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
-        .quote-box {
-            font-style: italic;
-            border-left: 3px solid #ffffff;
-            padding-left: 20px;
-            margin: 20px 0;
-            color: #b5b5be;
-        }
-        .milestone-list {
+        .info-list {
             list-style: none;
-            padding: 0;
+            margin-top: 10px;
         }
-        .milestone-item {
+        .info-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+            color: #b5b5be;
             display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* ป้องกันข้อมูลยาวเกินไปจนล้นบรรทัดในไอแพด */
+            gap: 10px;
         }
-        .milestone-year {
-            color: #ffffff;
-            font-weight: 700;
-            min-width: 60px;
+        .info-list li:last-child {
+            border-bottom: none;
         }
-        .milestone-detail h4 {
+        .info-list li span.label {
             color: #ffffff;
             font-weight: 500;
-            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
         }
-        .milestone-detail p {
-            color: #8a8a93;
-            font-size: 0.9rem;
+        .info-list li span.value {
+            text-align: right;
         }
     </style>
 </head>
@@ -63,40 +61,30 @@
 <div class="container">
     <div class="page-title">
         <h2>About Me</h2>
-        <p>My vision, future goals, and personal development journey</p>
+        <p>My background and personal information</p>
     </div>
 
     <div class="about-grid">
-        <!-- การ์ด 1: Philosophy & Concept -->
         <div class="card">
-            <h3 style="color: #ffffff; margin-bottom: 15px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem;">My Philosophy</h3>
-            <p style="color: #b5b5be; line-height: 1.8; font-size: 0.95rem;">
-                ฉันเชื่อว่าความเรียบง่ายคือจุดสูงสุดของความประณีต ในโลกดิจิทัลที่หมุนไปอย่างรวดเร็ว การสร้างสรรค์ผลงานที่เข้าใจง่าย สบายตา และตอบสนองผู้ใช้งานได้อย่างตรงจุด คือเป้าหมายสูงสุดในการเรียนรู้ของฉัน
-            </p>
-            <div class="quote-box">
-                "Simplicity is the ultimate sophistication."
-            </div>
-        </div>
-
-        <!-- การ์ด 2: Future Milestones -->
-        <div class="card">
-            <h3 style="color: #ffffff; margin-bottom: 20px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem;">My Goals</h3>
-            <div class="milestone-list">
-                <div class="milestone-item">
-                    <div class="milestone-year">2026</div>
-                    <div class="milestone-detail">
-                        <h4>University Admission</h4>
-                        <p>มุ่งมั่นสอบเข้าศึกษาต่อในระดับมหาวิทยาลัย เพื่อต่อยอดความรู้ด้านเทคโนโลยีและการออกแบบสร้างสรรค์</p>
-                    </div>
-                </div>
-                <div class="milestone-item" style="margin-bottom: 0;">
-                    <div class="milestone-year">Future</div>
-                    <div class="milestone-detail">
-                        <h4>Skills Master</h4>
-                        <p>พัฒนาทักษะการเขียนโปรแกรมและการออกแบบ UI/UX ให้เฉียบคม เพื่อก้าวสู่การเป็นนักพัฒนาเว็บมืออาชีพ</p>
-                    </div>
-                </div>
-            </div>
+            <h3 style="color: #ffffff; margin-bottom: 20px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; font-size: 1.1rem;">Personal Information</h3>
+            <ul class="info-list">
+                <li>
+                    <span class="label">Name</span>
+                    <span class="value">นางสาวชนัญชิตา วิทยาวรเศรษฐ์</span>
+                </li>
+                <li>
+                    <span class="label">Birthday</span>
+                    <span class="value">11 มีนาคม พ.ศ. 2552</span>
+                </li>
+                <li>
+                    <span class="label">Address</span>
+                    <span class="value" style="font-size: 0.9rem;">98/134 ม.4 หมู่บ้าน สุขใจวิลล่า8</span>
+                </li>
+                <li>
+                    <span class="label">Interests</span>
+                    <span class="value">Programming, Modern UI/UX, Creative Arts</span>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
